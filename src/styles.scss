@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1em;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+button {
+  min-width: 10ch;
+  border-radius: 6px;
+  border: 1px solid #929292;
+}

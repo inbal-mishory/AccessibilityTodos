@@ -1,0 +1,22 @@
+.done {
+  text-decoration: line-through;
+}
+
+.todos-list {
+  list-style-type: none;
+  padding-inline-start: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.todos-list li {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+input[type="checkbox"] {
+  width: 2em;
+  height: 2rem;
+}

@@ -1,0 +1,21 @@
+<add-todo (todoOutput)="addTodo($event)"></add-todo>
+<hr>
+<section class="todos-list">
+  <h2>To do List</h2>
+  @if (todosList.length > 0) {
+    <form [formGroup]="todoForm">
+    <ul class="todos-list">
+      @for (todo of todosList; track todo.id) {
+        <li>
+          <span [ngClass]="{'done': todoForm.get('completed-' + todo.id)?.value}">{{todo.task}}</span>
+          <button (click)="deleteTodo(todo.id)">Delete</button>
+          <input type="checkbox" formControlName="completed-{{todo.id}}" id="completed-{{todo.id}}" value="{{todo.completed}}" (change)="completed(todo)" (keydown)="completed(todo)">
+          <label for="completed-{{todo.id}}">mark complete</label>
+        </li>
+      }
+    </ul>
+    </form>
+  } @else {
+    <p>No Todos left.</p>
+  }
+</section>
