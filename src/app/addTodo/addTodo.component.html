@@ -1,8 +1,0 @@
-<section class="add-todo-section">
-  <h2>Add a Task</h2>
-  <form [formGroup]="addTodoForm" class="add-todo-form" (submit)="onAddTodo()">
-    <input type="text" formControlName="task" placeholder="Enter a task" aria-label="add-task">
-    <input type="submit" value="Add" [disabled]="addTodoForm.invalid">
-  </form>
-</section>
-
